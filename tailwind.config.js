@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         'primary': '#cfd400',
+        'customViolet': '#3c255b',
       }
     },
   },

@@ -14,7 +14,7 @@ export default function SelectedComponent() {
   if (isThankYou) return (
     <div className="flex flex-col items-center w-full my-6">
       <div className="flex flex-col items-center w-full gap-2 md:w-10/12 xl:w-6/12">
-        <h1 className="py-4 text-3xl font-bold text-center text-indigo-600 uppercase">
+        <h1 className="py-4 text-3xl font-bold text-center uppercase text-customViolet">
           THANK YOU
         </h1>
       </div>
@@ -33,21 +33,21 @@ export default function SelectedComponent() {
             _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
           </h1>
           <h1 className="px-4 py-2 text-2xl bg-primary">
-            <span className="text-indigo-500 uppercase">Step One&nbsp;</span>
+            <span className="uppercase text-customViolet">Step One&nbsp;</span>
             <span className="text-white">Customize your flight</span>
           </h1>
         </div>
         <img src={chair} alt="chair" className="w-40" />
-        <div className="flex items-center justify-between w-3/4 px-14 md:w-2/3">
-          <hr className="w-20 border border-primary" />
+        <div className="flex items-center justify-between w-3/4 px-4 md:w-2/3">
+          <hr className="w-3/12 border border-primary" />
           <h1 className="text-2xl uppercase text-primary">On budget</h1>
-          <hr className="w-20 border border-primary" />
+          <hr className="w-3/12 border border-primary" />
         </div>
-        {/* <div className="flex items-center justify-between w-3/4 md:w-2/3">
+        <div className="flex items-center justify-between w-3/4 -mt-2 md:w-2/3">
           <hr className="w-8 transform rotate-90 border border-primary" />
           <hr className="w-8 transform rotate-90 border border-primary" />
-        </div> */}
-        <div className="flex items-center justify-between w-full gap-3 sm:w-3/4 md:w-3/4">
+        </div>
+        <div className="flex items-center justify-between w-full gap-3 mt-6 sm:w-3/4 md:w-3/4">
           <img src={seatingInChair} alt="seating in chair" className="w-28" />
           <img src={ladyAndGents} alt="lady and gents" className="w-28" />
         </div>
@@ -62,14 +62,14 @@ export default function SelectedComponent() {
               &nbsp;
               No Sharing
             </span>
-            <span className="flex items-center gap-3 text-xl text-gray-500">
+            <span className="flex items-center gap-3 text-xl font-semibold text-customViolet">
               <CustomRadio checked={true} />
               &nbsp;
               Share seat&nbsp;
-              <sapn onClick={(e) => handleShowTip(e)} className="flex items-center justify-center w-4 h-4 text-sm border-2 rounded-full text-primary border-primary">!</sapn>
+              <sapn onClick={(e) => handleShowTip(e)} className="flex items-center justify-center w-4 h-4 text-sm border-2 rounded-full cursor-pointer text-primary border-primary">!</sapn>
               {
                 isShowTip && (
-                  <span className="absolute px-5 py-3 text-xs bg-gray-200 rounded-lg cursor-pointer w-44" style={{ left: xy.x + 20 }}>
+                  <span className="absolute px-5 py-3 text-xs bg-gray-200 rounded-lg w-44" style={{ left: xy.x + 20 }}>
                     Take turns sitting. Choose number of people to share your seat with (1 or 2). If you select 2, the greater the discount applied.
                   </span>
                 )
@@ -83,7 +83,7 @@ export default function SelectedComponent() {
             </span>
           </div>
           <div className="flex flex-col gap-3">
-            <span className="flex items-center gap-3 text-xl text-gray-500">
+            <span className="flex items-center gap-3 text-xl font-semibold text-customViolet">
               <CustomFilledRadio checked={true} />
               &nbsp;
               Don&apos;t use, don&apos;t pay
@@ -91,19 +91,17 @@ export default function SelectedComponent() {
             <span className="flex items-center gap-3 text-xl text-gray-500">
               <CustomFilledRadio />
               &nbsp;
-              Pay for short time&nbsp;
-              <sapn className="flex items-center justify-center w-4 h-4 text-sm border-2 rounded-full text-primary border-primary">!</sapn>
+              Pay for short time
             </span>
             <span className="flex items-center gap-3 text-xl text-gray-500">
               <CustomFilledRadio />
               &nbsp;
-              Pay for long time&nbsp;
-              <sapn className="flex items-center justify-center w-4 h-4 text-sm border-2 rounded-full text-primary border-primary">!</sapn>
+              Pay for long time
             </span>
           </div>
         </div>
         <div className="flex items-center justify-center w-full gap-3 sm:w-3/4 md:w-3/4">
-          <button onClick={() => setThankYou(true)} className="px-4 py-2 mt-6 font-semibold text-white uppercase bg-indigo-600 rounded-lg">Continue</button>
+          <button onClick={() => setThankYou(true)} className="px-4 py-2 mt-6 font-semibold text-white uppercase rounded-lg bg-customViolet">Continue</button>
         </div>
       </div>
     </div>

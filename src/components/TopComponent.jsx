@@ -13,7 +13,7 @@ export default function TopComponent() {
       <img src={logo} alt="logo" className="relative w-24 top-4 right-5" style={{ left: 'calc(100vw - 106px)' }} />
       <div className="w-full mx-auto md:w-11/12 xl:8/12" style={{ marginTop: '5%' }}>
         <img src={bannerArrow} alt="arrow" className="" style={{ width: '7%', minWidth: '30px' }} />
-        <div className="flex flex-col w-7/12 gap-2 mt-3 md:gap-4">
+        <div className="flex flex-col w-7/12 gap-2 mt-3 md:gap-4 h-3/4">
           <div className="flex items-center text-lg font-extrabold leading-none text-white md:text-4xl lg:text-5xl" style={{ height: '10px', lineHeight: '0.6' }}>
             . . . . . . . ... .. . . <br />
             . .. . . . . . ... . . . . <br />
@@ -22,7 +22,7 @@ export default function TopComponent() {
             Starting Janury 1st 2019, we have found <br />
             cheaper ways for you to fly. *
           </span>
-          <span className="hidden mt-24 text-lg font-bold text-white lg:block">
+          <span className="hidden text-lg font-bold text-white justify-self-end lg:block">
             ....... ..... ....... .............................. ..... ............. <br />
             ............. ..... ...... ..... ............................. ........ <br />
           </span>
