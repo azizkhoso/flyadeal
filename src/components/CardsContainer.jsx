@@ -6,12 +6,12 @@ import img3 from '../assets/no3.png';
 
 export default function CardsContainer() {
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-full py-4 bg-gray-100">
       <div className="flex flex-col w-full md:w-10/12 xl:w-6/12">
         <h1 className="text-xl font-bold text-center text-indigo-500 uppercase">
           SELECT
         </h1>
-        <h1 className="text-3xl text-center text-green-600 uppercase">
+        <h1 className="text-3xl text-center uppercase text-primary">
           To customize & save
         </h1>
         <div className="flex flex-wrap items-center justify-center w-full gap-6">

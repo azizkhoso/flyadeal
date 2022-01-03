@@ -6,7 +6,7 @@ import './index.css';
 
 function App() {
   return (
-    <div className="flex flex-col w-screen min-h-screen gap-6 m-0 bg-gray-50 b-0">
+    <div className="flex flex-col w-screen min-h-screen m-0 bg-gray-50 b-0">
       <TopComponent />
       <CardsContainer />
       <SelectedComponent />
