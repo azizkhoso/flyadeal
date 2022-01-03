@@ -10,7 +10,6 @@ export default function TopComponent() {
       className="w-full px-4 overflow-hidden bg-no-repeat md:px-0"
       style={{ minHeight: 'calc(100vw / 2.5)', backgroundImage: `url(${banner})`, backgroundSize: '100% auto' }}
     >
-      {/* <span className="absolute transform rotate-45 bg-indigo-600 -top-20 -right-36 h-60 w-96" /> */}
       <img src={logo} alt="logo" className="relative w-24 top-4 right-5" style={{ left: 'calc(100vw - 106px)' }} />
       <div className="w-full mx-auto md:w-11/12 xl:8/12" style={{ marginTop: '5%' }}>
         <img src={bannerArrow} alt="arrow" className="" style={{ width: '7%', minWidth: '30px' }} />
@@ -22,6 +21,10 @@ export default function TopComponent() {
           <span className="mt-3 text-xs text-white md:mt-8 sm:text-sm md:text-lg">
             Starting Janury 1st 2019, we have found <br />
             cheaper ways for you to fly. *
+          </span>
+          <span className="hidden mt-24 text-lg font-bold text-white lg:block">
+            ....... ..... ....... .............................. ..... ............. <br />
+            ............. ..... ...... ..... ............................. ........ <br />
           </span>
         </div>
       </div>

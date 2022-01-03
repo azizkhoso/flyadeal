@@ -8,8 +8,25 @@ import CustomRadio from './shareable/CustomOutlinedRadio';
 import CustomFilledRadio from './shareable/CustomFilledRadio';
 
 export default function SelectedComponent() {
+  const [isThankYou, setThankYou] = React.useState(false);
+  const [isShowTip, setShowTip] = React.useState(false);
+  const [xy, setXy] = React.useState({ x:0, y:0 });
+  if (isThankYou) return (
+    <div className="flex flex-col items-center w-full my-6">
+      <div className="flex flex-col items-center w-full gap-2 md:w-10/12 xl:w-6/12">
+        <h1 className="py-4 text-3xl font-bold text-center text-indigo-600 uppercase">
+          THANK YOU
+        </h1>
+      </div>
+    </div>
+  )
+  function handleShowTip(e) {
+    setShowTip(!isShowTip);
+    console.log({e});
+    setXy({ x: e.clientX });
+  }
   return (
-    <div className="flex flex-col items-center w-full mt-6">
+    <div className="flex flex-col items-center w-full my-6">
       <div className="flex flex-col items-center w-full gap-2 md:w-10/12 xl:w-6/12">
         <div className="flex flex-col gap-2 w-max">
           <h1 className="overflow-hidden text-2xl font-extrabold text-primary">
@@ -23,7 +40,7 @@ export default function SelectedComponent() {
         <img src={chair} alt="chair" className="w-40" />
         <div className="flex items-center justify-between w-3/4 px-14 md:w-2/3">
           <hr className="w-20 border border-primary" />
-          <h1 className="text-2xl text-primary uppercase">On budget</h1>
+          <h1 className="text-2xl uppercase text-primary">On budget</h1>
           <hr className="w-20 border border-primary" />
         </div>
         {/* <div className="flex items-center justify-between w-3/4 md:w-2/3">
@@ -49,16 +66,20 @@ export default function SelectedComponent() {
               <CustomRadio checked={true} />
               &nbsp;
               Share seat&nbsp;
-              <sapn className="flex items-center justify-center w-4 h-4 text-sm text-primary border-2 border-primary rounded-full">!</sapn>
-              <span className="absolute px-5 py-3 text-xs bg-gray-200 rounded-lg w-44" style={{ left: '38%' }}>
-                Take turns sitting. Choose number of people to share your seat with (1 or 2). If you select 2, the greater the discount applied.
-              </span>
+              <sapn onClick={(e) => handleShowTip(e)} className="flex items-center justify-center w-4 h-4 text-sm border-2 rounded-full text-primary border-primary">!</sapn>
+              {
+                isShowTip && (
+                  <span className="absolute px-5 py-3 text-xs bg-gray-200 rounded-lg cursor-pointer w-44" style={{ left: xy.x + 20 }}>
+                    Take turns sitting. Choose number of people to share your seat with (1 or 2). If you select 2, the greater the discount applied.
+                  </span>
+                )
+              }
             </span>
             <span className="flex items-center gap-3 text-xl text-gray-500">
               <CustomRadio />
               &nbsp;
               Share meal&nbsp;
-              <sapn className="flex items-center justify-center w-4 h-4 text-sm text-primary border-2 border-primary rounded-full">!</sapn>
+              <sapn className="flex items-center justify-center w-4 h-4 text-sm border-2 rounded-full text-primary border-primary">!</sapn>
             </span>
           </div>
           <div className="flex flex-col gap-3">
@@ -71,15 +92,18 @@ export default function SelectedComponent() {
               <CustomFilledRadio />
               &nbsp;
               Pay for short time&nbsp;
-              <sapn className="flex items-center justify-center w-4 h-4 text-sm text-primary border-2 border-primary rounded-full">!</sapn>
+              <sapn className="flex items-center justify-center w-4 h-4 text-sm border-2 rounded-full text-primary border-primary">!</sapn>
             </span>
             <span className="flex items-center gap-3 text-xl text-gray-500">
               <CustomFilledRadio />
               &nbsp;
               Pay for long time&nbsp;
-              <sapn className="flex items-center justify-center w-4 h-4 text-sm text-primary border-2 border-primary rounded-full">!</sapn>
+              <sapn className="flex items-center justify-center w-4 h-4 text-sm border-2 rounded-full text-primary border-primary">!</sapn>
             </span>
           </div>
+        </div>
+        <div className="flex items-center justify-center w-full gap-3 sm:w-3/4 md:w-3/4">
+          <button onClick={() => setThankYou(true)} className="px-4 py-2 mt-6 font-semibold text-white uppercase bg-indigo-600 rounded-lg">Continue</button>
         </div>
       </div>
     </div>
