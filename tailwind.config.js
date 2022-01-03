@@ -6,7 +6,10 @@ module.exports = {
       colors: {
         'primary': '#cfd400',
         'customViolet': '#3c255b',
-      }
+      },
+      fontSize: {
+        'mini': '0.6rem',
+      },
     },
   },
   variants: {
