@@ -22,7 +22,6 @@ export default function SelectedComponent() {
   )
   function handleShowTip(e) {
     setShowTip(!isShowTip);
-    console.log({e});
     setXy({ x: e.clientX });
   }
   return (
@@ -33,14 +32,14 @@ export default function SelectedComponent() {
             _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
           </h1>
           <h1 className="px-2 py-2 text-xl md:px-4 md:text-2xl bg-primary">
-            <span className="uppercase text-customViolet">Step One&nbsp;</span>
-            <span className="text-white">Customize your flight</span>
+            <span className="font-light uppercase text-customViolet" style={{ fontFamily: '\'Helvetica Neue\', sans-serif' }}>Step One&nbsp;</span>
+            <span className="text-white" style={{ fontFamily: '\'Raleway\'' }}>Customize your flight</span>
           </h1>
         </div>
         <img src={chair} alt="chair" className="w-40" />
         <div className="flex items-center justify-between w-3/4 px-4 md:w-2/3">
           <hr className="w-3/12 border border-primary" />
-          <h1 className="text-lg uppercase md:text-2xl text-primary">On budget</h1>
+          <h1 className="text-lg font-bold uppercase md:text-2xl text-primary">On budget</h1>
           <hr className="w-3/12 border border-primary" />
         </div>
         <div className="flex items-center justify-between w-3/4 -mt-2 md:w-2/3">
