@@ -29,22 +29,22 @@ export default function SelectedComponent() {
       <div className="flex flex-col items-center w-full gap-2 px-2 md:w-10/12 xl:w-6/12">
         <div className="flex flex-col gap-2 w-max">
           <h1 className="overflow-hidden text-2xl font-extrabold text-primary">
-            _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+            _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
           </h1>
           <h1 className="px-2 py-2 text-xl md:px-4 md:text-2xl bg-primary">
-            <span className="uppercase text-customViolet" style={{ fontFamily: '\'Raleway\', sans-serif' }}>Step One&nbsp;</span>
-            <span className="text-white" style={{ fontFamily: '\'Raleway\'' }}>Customize your flight</span>
+            <span className="uppercase text-customViolet sm:px-6" style={{ fontFamily: '\'Raleway\', sans-serif' }}>Step One&nbsp;</span>
+            <span className="font-extrabold text-white" style={{ fontFamily: '\'Raleway\'' }}>Customize your flight</span>
           </h1>
         </div>
-        <img src={chair} alt="chair" className="w-40" />
+        <img src={chair} alt="chair" className="w-60" />
         <div className="flex items-center justify-between w-3/4 px-4 md:w-2/3">
-          <hr className="w-3/12 border border-primary" />
-          <h1 className="py-1 font-bold uppercase sm:py-0 text-md sm:text-lg md:text-2xl text-primary">On budget</h1>
-          <hr className="w-3/12 border border-primary" />
+          <hr className="w-3/12 border-2 border-primary" />
+          <h1 className="py-1 font-bold uppercase md:font-black sm:py-0 text-md sm:text-lg md:text-2xl text-primary">On budget</h1>
+          <hr className="w-3/12 border-2 border-primary" />
         </div>
         <div className="flex items-center justify-between w-3/4 -mt-2 md:w-2/3">
-          <hr className="w-8 transform rotate-90 border border-primary" />
-          <hr className="w-8 transform rotate-90 border border-primary" />
+          <hr className="w-8 transform rotate-90 border-2 border-primary" />
+          <hr className="w-8 transform rotate-90 border-2 border-primary" />
         </div>
         <div className="flex items-center justify-between w-11/12 gap-3 mt-6 sm:w-3/4 md:w-3/4">
           <img src={seatingInChair} alt="seating in chair" className="w-24 md:w-28" />

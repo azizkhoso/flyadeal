@@ -14,7 +14,7 @@ export default function TopComponent() {
       <div className="flex flex-col flex-grow w-full h-full mx-auto md:w-11/12 lg:w-10/12 xl:w-8/12" style={{ paddingTop: '9%', paddingBottom: '3%', height: '100%' }}>
         <img src={bannerArrow} alt="arrow" className="" style={{ width: '7%', minWidth: '30px' }} />
         <div className="flex flex-col flex-grow w-3/6 gap-2 mt-3 md:gap-4">
-          <div className="text-lg font-bold leading-none text-white uppercase md:text-3xl lg:text-4xl" style={{ fontFamily: '\'Raleway\'' }}>
+          <div className="text-lg font-black leading-none text-white uppercase md:text-3xl lg:text-5xl" style={{ fontFamily: '\'Raleway\'' }}>
             You wont<br /> find it&nbsp;
             <span className="text-primary">cheaper</span>&nbsp;
             anywhere else.

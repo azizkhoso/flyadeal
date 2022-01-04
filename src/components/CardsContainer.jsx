@@ -38,7 +38,7 @@ export default function CardsContainer() {
               <div className="flex flex-col gap-2 w-60">
                 <div className="w-full bg-no-repeat bg-cover border-2 rounded-t-3xl h-72" style={{ backgroundImage: `url(${service.img})` }}>
                 </div>
-                <div className={`w-full h-20 px-20 flex items-center text-xl font-black text-center border-4 border-customViolet ${service.selected && 'bg-customViolet text-white'}`}>
+                <div className={`w-full h-20 px-20 flex items-center text-xl font-black text-center border-4 border-customViolet ${service.selected ? 'bg-customViolet text-white' : 'text-customViolet'}`}>
                   {service.title}
                 </div>
               </div>
