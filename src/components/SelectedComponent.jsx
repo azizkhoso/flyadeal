@@ -47,13 +47,13 @@ export default function SelectedComponent() {
           <hr className="w-8 transform rotate-90 border border-primary" />
           <hr className="w-8 transform rotate-90 border border-primary" />
         </div>
-        <div className="flex items-center justify-between w-full gap-3 mt-6 sm:w-3/4 md:w-3/4">
+        <div className="flex items-center justify-between w-11/12 gap-3 mt-6 sm:w-3/4 md:w-3/4">
           <img src={seatingInChair} alt="seating in chair" className="w-24 md:w-28" />
           <img src={ladyAndGents} alt="lady and gents" className="w-24 md:w-28" />
         </div>
         <div className="flex items-center justify-between w-full gap-3 sm:w-3/4 md:w-3/4">
-          <span className="text-xl font-extrabold text-primary md:text-3xl">. . . . ... .. .. ... ... </span>
-          <span className="text-xl font-extrabold text-primary md:text-3xl">. . . . ... .. .. .... ..</span>
+          <span className="text-lg font-extrabold uppercase text-primary md:text-xl">Share your seat </span>
+          <span className="text-lg font-extrabold uppercase text-primary md:text-xl lg:-mr-10">Pay for bathroom</span>
         </div>
         <div className="flex items-center justify-between w-full gap-3 sm:w-3/4 md:w-3/4">
           <div className="flex flex-col gap-3">
@@ -82,7 +82,7 @@ export default function SelectedComponent() {
               <sapn className="flex items-center justify-center w-4 h-4 text-sm border-2 rounded-full text-primary border-primary">!</sapn>
             </span>
           </div>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 lg:-mr-10">
             <span className="flex items-center gap-3 text-sm font-semibold md:text-xl text-customViolet">
               <CustomFilledRadio checked={true} />
               &nbsp;
